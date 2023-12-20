@@ -1,138 +1,121 @@
 ---
-layout: page
-# All the Categories of posts
+layout: default
+permalink: '/category'
 ---
 
-{% include lang.html %}
+<div class="category-wrap">
 
-{% assign HEAD_PREFIX = 'h_' %}
-{% assign LIST_PREFIX = 'l_' %}
+    <h1 class="category-title">Node.js</a></h1>
+    <ul class="posts-list">
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/03/20/Nodejs-Multer/">Node.JS API multer 이미지 업로드 + [postman 사용]</a>
+                <small>2023.03.20</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/03/10/Nodejs-CryptoJS/">Node.JS Crypto-js로 암호화 복호화 해보기</a>
+                <small>2023.03.10</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/03/05/Nodejs-JWT/">Node.JS JWT 생성하기</a>
+                <small>2023.03.05</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/03/01/Nodejs-DB">Node.JS DB연동 Mybatis-mapper</a>
+                <small>2023.03.01</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/02/05/Nodejs-RestAPI-POST">Node.JS Rest API 구현 POST방식 + Postman</a>
+                <small>2023.02.05</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/02/04/Nodejs-RestAPI-GET">Node.JS Rest API 구현 GET방식 + Postman</a>
+                <small>2023.02.04</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/02/01/Nodejs-Express">node.js Express 웹 서버 구동하기</a>
+                <small>2023.02.01</small>
+            </h3>
+        </li>
+    </ul>
 
-{% assign group_index = 0 %}
+    <h1 class="category-title">Java</a></h1>
+    <ul class="posts-list">
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/02/01/JavaSpringBoot-Gradle-War/">Java Spring Boot Swagger tomcat9 배포</a>
+                <small>2023.02.01</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/01/20/JavaSpringBoot-SignIn/">Java Spring Boot Swagger Login</a>
+                <small>2023.01.20</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/01/17/JavaSpringBoot-SignUp/">Java Spring Boot Swagger 회원가입하기</a>
+                <small>2023.01.17</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/01/15/JavaSpringBoot-Swagger/">Java Spring Boot Swagger 연결하기</a>
+                <small>2023.01.15</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2023/01/11/JavaSpringBoot-FcmPush/">Java Spring Boot FCM PUSH 연동하기</a>
+                <small>2023.01.11</small>
+            </h3>
+        </li>
+    </ul>
 
-{% assign sort_categories = site.categories | sort %}
-
-{% for category in sort_categories %}
-  {% assign category_name = category | first %}
-  {% assign posts_of_category = category | last %}
-  {% assign first_post = posts_of_category | first %}
-
-  {% if category_name == first_post.categories[0] %}
-    {% assign sub_categories = '' | split: '' %}
-
-    {% for post in posts_of_category %}
-      {% assign second_category = post.categories[1] %}
-      {% if second_category %}
-        {% unless sub_categories contains second_category %}
-          {% assign sub_categories = sub_categories | push: second_category %}
-        {% endunless %}
-      {% endif %}
-    {% endfor %}
-
-    {% assign sub_categories = sub_categories | sort %}
-    {% assign sub_categories_size = sub_categories | size %}
-
-    <div class="card categories">
-      <!-- top-category -->
-      <div
-        id="{{ HEAD_PREFIX }}{{ group_index }}"
-        class="card-header d-flex justify-content-between hide-border-bottom"
-      >
-        <span class="ms-2">
-          <i class="far fa-folder{% if sub_categories_size > 0 %}-open{% endif %} fa-fw"></i>
-
-          {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
-          <a href="{{ _category_url | relative_url }}" class="mx-2">{{ category_name }}</a>
-
-          <!-- content count -->
-          {% assign top_posts_size = site.categories[category_name] | size %}
-          <span class="text-muted small font-weight-light">
-            {% if sub_categories_size > 0 %}
-              {{ sub_categories_size }}
-              {% if sub_categories_size > 1 %}
-                {{
-                  site.data.locales[lang].categories.category_measure.plural
-                  | default: site.data.locales[lang].categories.category_measure
-                }}
-              {% else %}
-                {{
-                  site.data.locales[lang].categories.category_measure.singular
-                  | default: site.data.locales[lang].categories.category_measure
-                }}
-              {% endif -%}
-              ,
-            {% endif %}
-
-            {{ top_posts_size }}
-
-            {% if top_posts_size > 1 %}
-              {{
-                site.data.locales[lang].categories.post_measure.plural
-                | default: site.data.locales[lang].categories.post_measure
-              }}
-            {% else %}
-              {{
-                site.data.locales[lang].categories.post_measure.singular
-                | default: site.data.locales[lang].categories.post_measure
-              }}
-            {% endif %}
-          </span>
-        </span>
-
-        <!-- arrow -->
-        {% if sub_categories_size > 0 %}
-          <a
-            href="#{{ LIST_PREFIX }}{{ group_index }}"
-            data-bs-toggle="collapse"
-            aria-expanded="true"
-            aria-label="{{ HEAD_PREFIX }}{{ group_index }}-trigger"
-            class="category-trigger hide-border-bottom"
-          >
-            <i class="fas fa-fw fa-angle-down"></i>
-          </a>
-        {% else %}
-          <span data-bs-toggle="collapse" class="category-trigger hide-border-bottom disabled">
-            <i class="fas fa-fw fa-angle-right"></i>
-          </span>
-        {% endif %}
-      </div>
-      <!-- .card-header -->
-
-      <!-- Sub-categories -->
-      {% if sub_categories_size > 0 %}
-        <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse show" aria-expanded="true">
-          <ul class="list-group">
-            {% for sub_category in sub_categories %}
-              <li class="list-group-item">
-                <i class="far fa-folder fa-fw"></i>
-
-                {% capture _sub_ctg_url %}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
-                <a href="{{ _sub_ctg_url | relative_url }}" class="mx-2">{{ sub_category }}</a>
-
-                {% assign posts_size = site.categories[sub_category] | size %}
-                <span class="text-muted small font-weight-light">
-                  {{ posts_size }}
-
-                  {% if posts_size > 1 %}
-                    {{
-                      site.data.locales[lang].categories.post_measure.plural
-                      | default: site.data.locales[lang].categories.post_measure
-                    }}
-                  {% else %}
-                    {{
-                      site.data.locales[lang].categories.post_measure.singular
-                      | default: site.data.locales[lang].categories.post_measure
-                    }}
-                  {% endif %}
-                </span>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% endif %}
-    </div>
-    <!-- .card -->
-
-    {% assign group_index = group_index | plus: 1 %}
-  {% endif %}
-{% endfor %}
+    <h1 class="category-title">Swift</a></h1>
+    <ul class="posts-list">
+        <li>
+            <h3>
+                <a href="/whiteglass/2022/04/27/UserDefault-save/">Swift UserDefaults로 데이터 저장하기</a>
+                <small>2022.04.27</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2022/03/31/WKWebView-new-window/">Swift WKWebView 새창 열기</a>
+                <small>2022.03.31</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2022/01/20/textFiled-notification/">Swift ViewController present 데이터 전달</a>
+                <small>2022.03.24</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2022/01/20/textFiled-notification/">Swift TextField 키보드 감지 하기(NotificationCenter)</a>
+                <small>2022.01.20</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/whiteglass/2021/08/15/Swift-Alamofire-api/">Swift Alamofire API 통신</a>
+                <small>2021.08.15</small>
+            </h3>
+        </li>
+    </ul>
+</div>
