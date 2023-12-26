@@ -1,4 +1,4 @@
-# whiteglass
+# Yagsill의 개발 블로그 
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-whiteglass.svg)](https://badge.fury.io/rb/jekyll-whiteglass)
 [![CircleCI](https://circleci.com/gh/yous/whiteglass/tree/master.svg?style=shield)](https://circleci.com/gh/yous/whiteglass/tree/master)
