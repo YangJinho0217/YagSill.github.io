@@ -23,3 +23,6 @@ AWS Cloue Server 사용하고 있고 너무 재밌습니당. 감사합니당.
 🚀 Node.js Server Programming<br/>
 <br/>
 🚀 Mysql Qurey
+
+# 👍🏻 Blog URL
+[Yagsill Blog](https://yangjinho0217.github.io/)
