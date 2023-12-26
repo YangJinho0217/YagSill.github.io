@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Yagsill
-description: Minimal, responsive Jekyll theme for hackers.
+subtitle : 야그실의 개발블로그
 # baseurl: "/whiteglass" # the subpath of your site, e.g. /blog
 url: "https://YangJinho0217.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
