@@ -1,5 +1,5 @@
 # 🛠️ Yagsill의 개발 블로그
-![header](https://capsule-render.vercel.app/api?type=Transparent&color=auto&height=300&section=header&text=Yagsill%&fontSize=70)
+![header](https://capsule-render.vercel.app/api?type=Rounded&color=auto&height=300&section=header&text=Yagsill%&fontSize=70)
 
 # 🛠️ Yagsill's Stack
 ![Js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
