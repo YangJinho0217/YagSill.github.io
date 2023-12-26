@@ -1,4 +1,4 @@
-# 🛠️ Yagsill의 개발 블로그
+# 🛠️ Yagsill's Development Blog
 ![header](https://capsule-render.vercel.app/api?type=Rounded&color=auto&height=300&section=header&text=Yagsill%&fontSize=70)
 
 # 🛠️ Yagsill's Stack
