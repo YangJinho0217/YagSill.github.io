@@ -192,7 +192,7 @@ function target() {
 <article class="card">
   <img
     class="card__background"
-    src="../assets/Yagsill.png"
+    src="../assets/YagsillLogo.png"
     alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
     width="1920"
     height="2193"

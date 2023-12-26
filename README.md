@@ -12,7 +12,7 @@
 ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 # 📖 Introduction
-안녕하세요 저는 Swift개발자로 일하고 있고 틈틈이 Node.js로 서버를 개발하고 있습니다.
+안녕하세요 저는 Swift개발자로 일하고 있고 틈틈이 Node.js로 서버를 개발하고 있습니다.<br/>
 AWS Cloue Server 사용하고 있고 너무 재밌습니당. 감사합니당.
 
 # ⬇︎ Content
