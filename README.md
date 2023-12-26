@@ -11,7 +11,13 @@
 ![AWS](https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-
 # 📖 Introduction
-안녕하세요 저는 Swift개발자로 일하고 있고 틈틈히 Node.js로 서버를 개발하고 있습니다.
+안녕하세요 저는 Swift개발자로 일하고 있고 틈틈이 Node.js로 서버를 개발하고 있습니다.
 AWS Cloue Server 사용하고 있고 너무 재밌습니당. 감사합니당.
+
+# ⬇︎ Content
+블로그에서 다루는 내용은 다음과 같습니다.
+
+🚀 Swift programming
+🚀 Node.js Server Programming
+🚀 Mysql Qurey
