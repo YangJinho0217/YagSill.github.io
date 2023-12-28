@@ -2,11 +2,13 @@
 layout: post
 title : Swift TextField 키보드 감지 하기(NotificationCenter)
 tag : [Swift, SwiftUI]
+toc : true
 ---
   
 Swift TextField 키보드 감지 하기(NotificationCenter)
   
 별거 없습니다 그냥 코드만 추가하면 됩니다.
+
 ```swift
 override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -29,6 +31,7 @@ override func viewWillDisappear(_ animated: Bool) {
 }
 ```
 키보드를 올리고 내리고 해보죠
+
 ```swift
 @objc func keyboardWillShow(notification : NSNotification) {
     print("-----> keyboardWillShow() 호출")

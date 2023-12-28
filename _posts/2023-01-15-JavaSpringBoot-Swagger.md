@@ -1,10 +1,17 @@
 ---
 layout: post
 title : Java Spring Boot Swagger 연결하기
+listTitle : JAVA Swagger 연동해보기
+listSubTitle : 1.Controller / Dao 훑어보기
+listSubTitle2 : 2.Dto 훑어보기
+listSubTitle3 : 3.Service 훑어보기
 tag : [JAVA, SpringBoot, Swagger]
 ---
   
 안녕하세요 API를 좀더 직관적으로 볼 수 있게 Swagger 페이지를 연동해 보았습니다.
+<div id="subTitle">
+</div>
+
 ```java
 // Controller
 @RestController
@@ -39,7 +46,10 @@ public interface InitDao {
 ```
 Mapper Annotation을 사용하여 XML 파일에 접근할 수 있습니다.
   
+<div id="subTitle2">
 dto 부분입니다.
+</div>
+
 ```java
 //Dto
 @Data
@@ -75,6 +85,10 @@ public class FirstDto {
 In -> swagger의 입력부분입니다.
   
 Out -> 리턴값이라고 생각하면 됩니다.
+  
+<div id="subTitle3">
+</div>
+
 ```java
 //Service
 public class FirstService {

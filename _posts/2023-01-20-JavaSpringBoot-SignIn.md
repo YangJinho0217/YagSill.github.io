@@ -1,10 +1,18 @@
 ---
 layout: post
 title : Java Spring Boot Swagger Login 
+listTitle : JAVA Swagger + 로그인
+listSubTitle : 1.Controller 훑어보기
+listSubTitle2 : 2.Dto 훑어보기
+listSubTitle3 : 3.Service 훑어보기
+listSubTitle4 : 4.Mapper 훑어보기
 tag : [JAVA, SpringBoot, Swagger]
 ---
 
 이전 포스트에 이어서 로그인 툴을 만들어 보겠습니다.
+<div id="subTitle">
+</div>
+
 ```java
 // Controller
 @RestController
@@ -29,6 +37,8 @@ public class UserController {
 }
 ```
 로그인하려면 파라미터로 아이디랑 패스워드를 받아야 하잖아요? 그 부분은 DTO에서 받아보도록 하겠습니다.
+<div id="subTitle2">
+</div>
   
 ```java
 // DTO
@@ -77,6 +87,9 @@ public class UserDto {
 ```
 DTO의 In 부분은 swagger에서 파라미터값으로 넣는 값들 입니다. 
 Out 부분은 쿼리를 돌리고 나서 뱉어내는 객체타입의 값입니다. mapper에서 설정을 잘 해주셔야 합니다.
+<div id="subTitle3">
+</div>
+
 ```java
 // Service
 @Service
@@ -124,6 +137,9 @@ return에 값이 들어갈때는 DTO에 data 타입과 맞는 타입이여야 �
 DTO에 보시면 Result 부분에있는 data타입이 public Map<String,Object> data 타입이기 때문에 Service부분에서 담아줄 타입도 Map<String,Object> 타입인 result로 설정했습니다.
   
 다음은 mapper 입니다.
+<div id="subTitle4">
+</div>
+
 ```xml
 // Mapper
 <?xml version="1.0" encoding="UTF-8"?>

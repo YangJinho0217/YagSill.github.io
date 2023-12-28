@@ -8,6 +8,7 @@
     {% include header.html %}
 
     <main class="page-content" aria-label="Content">
+      
       <div class="wrapper">
         {{ content }}
       </div>
@@ -15,6 +16,109 @@
 
     {% include footer.html %}
 
+    <!-- <div class="side">
+      <img class="img" src="/assets/favicon.png"/><br />
+      <h1 class="title">Yagsill</h1>
+      <h3 class="subtitle">Swift & Node.js Developer</h3>
+      <div class="btnGrp">
+        <button class="githubBtn" type="button" onclick="pageMove('github')">
+          <img class="githubBtnImg" src="/assets/github.svg">
+        </button>
+        <button class="mailBtn" type="button" onclick="pageMove('mail')">
+          <img class="mailBtnImg" src="/assets/gmail.svg">
+        </button>
+      </div>
+    </div> -->
+
   </body>
 
 </html>
+
+<style>
+
+.side {
+  display: block;
+  position : fixed;
+  top : 20%;
+  left : 5%;
+  
+}
+.img {
+  width: 200px;
+  height: 200px;
+}
+
+.title {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+}
+.subtitle {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.btnGrp {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.githubBtn {
+  background-color: transparent;
+  border: none;
+}
+.githubBtn:hover {
+  cursor: pointer;
+}
+.githubBtnImg {
+  width: 40px;
+  height: 40px;
+}
+.mailBtn {
+  background-color: transparent;
+  border: none;
+}
+.mailBtn:hover {
+  cursor: pointer;
+}
+.mailBtnImg {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 1400px) {
+  .side {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .side {
+    display: none;
+  }
+}
+</style>
+<script>
+function pageMove(parameter) {
+
+  if (parameter == "github") {
+    window.location.href = "https://github.com/YangJinho0217"
+    return
+  }
+
+  if (parameter == "mail") {
+    window.location.href = "mailto:altm56@gmail.com?subject=안녕하세요."
+    return
+  }
+
+}
+</script>

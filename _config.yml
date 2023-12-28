@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Yagsill
-subtitle : 야그실의 개발블로그
+subtitle : Developer
 # baseurl: "/whiteglass" # the subpath of your site, e.g. /blog
 url: "https://YangJinho0217.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
@@ -43,6 +43,7 @@ plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-toc
 
 # Build settings
 markdown: kramdown

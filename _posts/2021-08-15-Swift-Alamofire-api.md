@@ -1,20 +1,27 @@
 ---
 layout: post
 title : Swift Alamofire API 통신
+listTitle : Swift Alamofire API 통신
+listSubTitle : -Pod install 방법
+listSubTitle2 : -Alamofire API 통신 방법
 tag : [Swift, SwiftUI]
+toc : true
 ---
 
 Swift Alamofire 라이브러리로 Rest API 통신을 해보기.  
   
 [GET 방식], [POST 방식]
-
+<div id="subTitle">
 cocoapods 설치나 설정은 알고 있을거라 예상하고 pod 파일에 Alamofire를 추가해 줍니다.
+</div>
 
 ```
 pod 'Alamofire'
 ```
 
+<div id="subTitle2">
 이후 ViewController에서 라이브러리 import를 시켜 주고 바로 사용해보겠습니다.  
+</div>
 
 ```swift
 import Alamofire
@@ -58,6 +65,5 @@ class ViewController {
 ```
 
 이정도 되면 Alamofire 호출은 식은죽 먹기입니다.  
-  
-감사합니다.
 
+감사합니다.

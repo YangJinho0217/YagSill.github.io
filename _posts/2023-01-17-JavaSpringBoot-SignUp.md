@@ -1,11 +1,19 @@
 ---
 layout: post
 title : Java Spring Boot Swagger 회원가입하기
+listTitle : JAVA Swagger + 회원가입
+listSubTitle : 1.Controller 훑어보기
+listSubTitle2 : 2.Dto 훑어보기
+listSubTitle3 : 3.Dao 훑어보기
+listSubTitle4 : 4.Service 훑어보기
 tag : [JAVA, SpringBoot, Swagger]
 ---
 안녕하세요 yagsil 입니다.
   
 오늘은 spring boot과 swagger를 연동해서 회원가입 툴을 만들어 보겠습니다.
+<div id="subTitle">
+</div>
+
 ```java
 // Controller
 @RestController
@@ -26,7 +34,12 @@ public class UserController {
         return new ResponseEntity<>(userService.signUp(in), HttpStatus.OK);
     }
 }
+
 ```
+  
+<div id="subTitle2">
+</div>
+
 ```java
 // DTO
 public class SignUpDto {
@@ -70,6 +83,10 @@ public class SignUpDto {
     }
 }
 ```
+  
+<div id="subTitle3">
+</div>
+
 ```java
 // DAO
 @Mapper
@@ -78,6 +95,11 @@ public interface UserDao {
    public Map<String,Object> selectAppId(Map<String,Object> param);
 }
 ```
+  
+<div id="subTitle4">
+</div>
+
+
 ```java
 // Service
 public SignUpDto.Result signUp(SignUpDto.In in) {

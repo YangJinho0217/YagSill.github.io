@@ -1,12 +1,20 @@
 ---
 layout: post
 title : Java Spring Boot FCM PUSH 연동하기
+listTitle : JAVA FCM Push 연동
+listSubTitle : -Service 훑어보기
+listSubTitle2 : -Controller 훑어보기
+listSubTitle3 : -Ajax 훑어보기
 tag : [JAVA, SpringBoot, Firebase]
 ---
   
 JAVA에서 firebase로 push 기능을 연동하는 방법에 대해서 설명해 보겠습니다.
   
+
+<div id="subTitle">
 Service 부분입니다.
+</div>
+
 ```java
 public class FirebaseCloudMessageService {
 
@@ -59,6 +67,11 @@ firebase에서 프로젝트를 등록한 후 json 키를 받아서 프로젝트�
 API_URL 같은 경우에는 저 링크 그대로 갖다 쓰셔도 됩니다. 단 '프로젝트 이름' 에는 본인의 firebase 프로젝트 이름을 넣어야 합니다.
   
 서비스 기능을 만들어 놓고 이제 컨트롤러에서 호출해주면 됩니다.
+  
+<div id="subTitle2">
+Controller 부분입니다.
+</div>
+
 ```java
 // Controller 부분
 
@@ -87,6 +100,11 @@ public Object testPostBodyJson(@RequestParam(value = "arrStr") List<String> arrS
 ```
 
 ajax로 javascript를 이용해 호출하는 클라이언트부분입니다.
+  
+<div id="subTitle3">
+Ajax 호출 부분 입니다.
+</div>
+
 ```javascript
 // ajax 부분
 

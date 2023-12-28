@@ -162,9 +162,9 @@ pre,
 code {
   font-family: $monospace-font-family;
   font-size: 13px;
-  border: 1px solid $grey-color-light;
-  border-radius: 0;
-  background-color: #f8f8f8;
+  // border: 1px solid $grey-color-light;
+  border-radius: 10px;
+  background-color: #3a3a43;
 }
 
 code {
@@ -192,7 +192,7 @@ pre {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
-  margin-left: auto;
+    margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;
@@ -202,6 +202,15 @@ pre {
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit * 0.5;
     padding-left: $spacing-unit * 0.5;
+  }
+}
+
+@media (max-width: 1400px) {
+  .wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

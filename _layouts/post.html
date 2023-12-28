@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<script src="/js/post.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -9,7 +11,12 @@ layout: default
     {% else %}
       <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     {% endif %}
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include date.html date=page.date %}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}{% if page.categories != empty or page.tags != empty %}{% include category_links.html categories=page.categories tags=page.tags %}{% endif %}</p>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include date.html date=page.date %}</time>
+      {% if page.author %} • 
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ page.author }}</span>
+      </span>{% endif %}{% if page.categories != empty or page.tags != empty %}{% include category_links.html categories=page.categories tags=page.tags %}{% endif %}</p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -22,5 +29,78 @@ layout: default
     </div>
   {% endif %}
 
-
 </article>
+
+<div class="list">
+  <div>
+    <a class="listTitle" onclick="clickMoveTop()">{{ page.listTitle}}</a><br />
+  </div>
+  <div class="subTitleClass">
+    <a class="listSubTitle" href="#subTitle">{{ page.listSubTitle}}</a><br class="brClass" />
+    <a class="listSubTitle" href="#subTitle2">{{ page.listSubTitle2}}</a><br class="brClass" />
+    <a class="listSubTitle" href="#subTitle3">{{ page.listSubTitle3}}</a><br class="brClass" />
+    <a class="listSubTitle" href="#subTitle4">{{ page.listSubTitle4}}</a><br class="brClass" />
+    <a class="listSubTitle" href="#subTitle5">{{ page.listSubTitle5}}</a><br class="brClass" />
+  </div>
+</div>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .list {
+    position : fixed;
+    top : 30%;
+    right: 5%;
+    display: block;
+    height: auto;
+    border-left: 0.5px solid;
+    border-color: rgb(92, 92, 92);
+    overflow:auto; 
+  }
+
+  .brClass {
+    display: inline-block;
+    height: auto;
+  }
+
+  .subTitleClass {
+    display: inline-block;
+    height: auto;
+    overflow: auto; 
+  }
+
+  .list .listTitle {
+    margin-left: 15px;
+    color: rgb(89, 89, 89);
+    font-size: 20px;
+  }
+
+  .list .listTitle:hover {
+    color : rgb(170, 170, 170)
+  }
+
+  .list .listSubTitle {
+    margin-left: 15px;
+    color: rgb(89, 89, 89);
+    font-size: 15px;
+    display: inline-block;
+    height: auto;
+  }
+
+  .list .listSubTitle:hover {
+    color : rgb(170, 170, 170)
+  }
+
+  .subTitleClass {
+    margin-top: 10px;
+  }
+
+  @media (max-width: 1400px) {
+    .list {
+      display: none;
+    }
+}
+
+</style>

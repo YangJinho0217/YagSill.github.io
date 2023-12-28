@@ -1,6 +1,11 @@
 ---
 layout: post
 title : Node.JS Crypto-js로 암호화 복호화 해보기
+listTitle : 암호화 복호화 해버리기
+listSubTitle : 1.crypto-js 패키지 설치
+listSubTitle2 : 2.스크립트 파일 내 패키지 추가
+listSubTitle3 : 3.암복호화 메소드 분리
+listSubTitle4 : 4.테스트 해보기
 tag : [Javascript, Node.js]
 ---
 
@@ -10,17 +15,23 @@ tag : [Javascript, Node.js]
 그래서 암호화를 하고 DB에서 가져온 비밀번호를 또 복호화 해서 로그인, 회원가입 처리를 해주어야 하는데 말이죠  
 crypto-js로 진행해 보겠습니다.
   
+<div id="subTitle"></div>
+
 crypto-js 패키지를 설치해 줍니다.
 ```linux
 $npm install crypto-js
 ```
   
+<div id="subTitle2"></div>
+
 암호화 및 복호화를 진행할 스크립트에 추가해 줍니다.
 ```javascript
 const cryptojs = require("crypto-js");
 const encryptedKey = "암복호화키를 넣어주세용";
 ```
   
+<div id="subTitle3"></div>
+
 암호화, 복호화 기능 따로 분리해서 함수로 만들어 줍니다.
 ```javascript
 function encryptPassword(password, encryptedKey) {
@@ -41,6 +52,8 @@ function decryptPassword(password, encryptedKey) {
 var password = encryptPassword('암호화할 데이터', encryptedKey);
 ```
   
+<div id="subTitle4"></div>
+
 이렇게 하고 password를 찍어볼게요.  
 저의 비밀번호는 1234 로 넣어봤습니다.
 ```xml

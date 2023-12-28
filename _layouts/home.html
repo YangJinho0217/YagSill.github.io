@@ -13,7 +13,8 @@ layout: default
   .card {
     position : relative;
     display: grid;
-    left : 26%;
+    /* left : 26%; */
+    margin: 0 auto;
     place-items: center;
     width: 80vw;
     max-width: 21.875rem;
@@ -25,9 +26,9 @@ layout: default
   
   /* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/ 
   @media all and (min-width:768px) and (max-width:1023px) {
-    .card {
+    /* .card {
       left : 26%;
-    }
+    } */
   } 
   
   /* 테블릿 세로 (해상도 768px ~ 1023px)*/ 
@@ -40,9 +41,9 @@ layout: default
   
   /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
   @media all and (max-width:479px) {
-    .card {
+    /* .card {
       left : 7%;
-    }
+    } */
   }
   
   .card > * {
@@ -209,48 +210,4 @@ layout: default
       <button class="card__button" onclick="target()"><img class="Yagsill_button" src="/assets/github.png" /> github</button>
     </div>
   </article>
-  <!-- {{ content }}
-
-  {% capture site_lang %}{{ site.lang | default: "en" }}{% endcapture %}
-
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %}
-      {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
-
-      <li{% if lang != empty %} lang="{{ lang }}"{% endif %}>
-        <header class="post-header">
-          <h1 class="post-title">
-            {% if post.external-url %}
-              <a class="post-link" href="{{ post.external-url }}">{{ post.title | escape }} &rarr;</a>
-            {% else %}
-              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            {% endif %}
-          </h1>
-
-          <p class="post-meta">
-            {% include date.html date=post.date lang=lang %}
-            {% if post.categories != empty or post.tags != empty %}
-              {% include category_links.html categories=post.categories tags=post.tags %}
-            {% endif %}
-            {% if post.external-url %}
-              • <a href="{{ post.url | relative_url }}">Permalink</a>
-            {% endif %}
-          </p>
-        </header>
-
-        <div class="post-content">
-          {{ post.excerpt }}
-        </div>
-        {% if post.content contains site.excerpt_separator %}
-          <p class="post-continue">
-            <a href="{{ post.url | relative_url }}">{% include i18n.html lang=lang value="morelink" default="Read on" %} &rarr;</a>
-          </p>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-
-  {% include pagination.html %} -->
-
 </div>

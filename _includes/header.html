@@ -2,8 +2,10 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-
+    <a class="site-title" href="{{ "/" | relative_url }}">
+      <img class="titleImg" src="/assets/favicon.png" style="width: 35px; height: 35px;"/> {{ site.title | escape }}
+    </a>
+    
     <nav class="site-nav">
       {% for link in site.data.navigation.main %}
         {% if link.url contains "http" %}
@@ -18,3 +20,15 @@
   </div>
 
 </header>
+<style>
+.titleImg {
+  /* display: block;
+  float: left; */
+  
+}
+@media (max-width: 1400px) {
+  .titleImg {
+    display: none;
+  }
+}
+</style>
