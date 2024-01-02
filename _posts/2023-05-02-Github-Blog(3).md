@@ -3,8 +3,10 @@ layout: post
 title : Github Blog 만들기(3) + jekyll Theme
 listTitle: Github jekyll Theme
 listSubTitle : 1.Jekyll 파일 생성
-listSubTitle2 : 2.Repository 내용 작성
-listSubTitle3 : 3.GitClone 하기(SourceTree 사용)
+listSubTitle2 : 2.jekyll Theme + Chrispy
+listSubTitle3 : 3.zip파일 압축해제
+listSubTitle4 : 4.bundle install
+listSubTitle5 : 5.jekyll server 켜기
 tag : [Github]
 toc : true
 ---
@@ -36,35 +38,55 @@ $jekyll new ./
   
 <div id="subTitle2"></div>
 
-## **2. jekyll Theme 파일 덮어쓰기**
+## **2. jekyll Theme + Chirpy**
   
+여러 템플릿이 있는데 많은 분들이 사용하는 **Chirpy** 테마를 사용해 보겠습니다.
 
-```linux
-$gem install bundler
-$bundler --version
->Bundler version 2.5.1
-```
-  
-bundler 설치 성공!
-## **2. Jekyll 설치**
-  
-```linux
-$gem install jekyll
-$jekyll --version
->jekyll 4.3.2
-```
-  
-jekyll 설치 성공!
-  
+![image](/assets/Chrispy_theme_download.png)
 
+![image](/assets//Chrispy_theme.png)
+
+Download 버튼으로 테마를 다운로드 해주세요
+  
 <div id="subTitle3"></div>
 
-## **3. 터미널에서 jekyll server 켜기 **
+## **3. zip파일 압축해제**
+
+다운로드된 zip파일을 압축해제 후 안에있는 모든 파일을 본인의 Repository 폴더 안으로 전부 넣어줍니다.
+* Repository 폴더란 Git Clone한 폴더 입니다
+
+![image](/assets/jekyll_cover_file_all.png)
+  
+![image](/assets/jekyll_cover_file_agree.png)
+  
+[모두적용] 체크 후 **대치** 를 눌러줍니다.
+  
+<div id="subTitle4"></div>
+
+## **4. bundle install**
+
+일단 모든 Chirpy 파일들을 옮겼으면 bundle install을 통해 Chirpy의 패키지들을 설치해 줘야 합니다.
+  
+```linux
+$bundle install
+```
+  
+<div id="subTitle5"></div>
+
+## **5. jekyll server 켜기**
+  
+이제 폴더에서 터미널을 켜줍니다.
+  
+아래 명령어로 서버를 켜주기만 하면 됩니다.
 
 ```linux
-bundle exec jekyll serve
+$bundle exec jekyll serve
 ```
-![image](/assets/terminal_jekyllServe.png)
+
+**http://127.0.0.1:4000 접속**
+
+![image](/assets/jekyll_chrispy.png)
   
-서버 켜기 성공!
-* 웹페이지에서 http://127.0.0.1:4000 으로 들어가면 됩니다.
+Jekyll 테마를 이용해 여러가지 Custom을 해보면 됩니다. 다음 포스팅은 여러가지 커스텀을 해보겠습니다.
+  
+감사합니다.
