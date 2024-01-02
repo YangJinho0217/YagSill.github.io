@@ -2,7 +2,7 @@
 layout: post
 title : Github Blog 만들기(3) + jekyll Theme
 listTitle: Github jekyll Theme
-listSubTitle : 1.Repository 만들기
+listSubTitle : 1.Jekyll 파일 생성
 listSubTitle2 : 2.Repository 내용 작성
 listSubTitle3 : 3.GitClone 하기(SourceTree 사용)
 tag : [Github]
@@ -19,18 +19,24 @@ toc : true
   
 <div id="subTitle"></div>
 
-## **1. Jekyll Theme Download**
+## **1. Jekyll 파일 생성**
+  
+본인의 GIthub 폴더로 이동해서 해당 명령어 입력
   
 ```linux
-$ruby --version
->ruby 3.2.2
+$jekyll new ./
 ```
-Ruby 버전 확인 성공!
   
-
+![image](/assets/jekyllFolder.png)
+  
+일단 이런식으로 폴더에 여러가지 파일들이 생성이 됩니다.
+* sourceTree에서 Clone한 폴더로 이동해 터미널을 열어준다.
+* 터미널에서 $jekyll new ./ 명령어를 입력해 준다.
+* 폴더 내 파일들 생성까지 확인!
+  
 <div id="subTitle2"></div>
 
-## **2. Bundler 설치**
+## **2. jekyll Theme 파일 덮어쓰기**
   
 
 ```linux
