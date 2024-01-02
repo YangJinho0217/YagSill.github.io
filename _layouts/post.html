@@ -32,7 +32,7 @@ layout: default
 </article>
 
 <div class="list">
-  <div>
+  <div class="listTitleDiv">
     <a class="listTitle" onclick="clickMoveTop()">{{ page.listTitle}}</a><br />
   </div>
   <div class="subTitleClass">
@@ -55,8 +55,6 @@ layout: default
     right: 5%;
     display: block;
     height: auto;
-    border-left: 0.5px solid;
-    border-color: rgb(92, 92, 92);
     overflow:auto; 
   }
 
@@ -71,8 +69,14 @@ layout: default
     overflow: auto; 
   }
 
+  .listTitleDiv {
+    border-left: 3px solid;
+    border-color: rgb(92, 92, 92);
+
+  }
+
   .list .listTitle {
-    margin-left: 15px;
+    margin-left: 5px;
     color: rgb(89, 89, 89);
     font-size: 20px;
   }
