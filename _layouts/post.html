@@ -23,11 +23,11 @@ layout: default
     {{ content }}
   </div>
 
-  {% if site.comments == true and page.comments != false %}
+  <!-- {% if site.comments == true and page.comments != false %}
     <div class="post-comments" itemprop="comment">
       {% include custom_comments_provider.html %}
     </div>
-  {% endif %}
+  {% endif %} -->
 
 </article>
 
@@ -108,3 +108,11 @@ layout: default
 }
 
 </style>
+
+<script src="https://utteranc.es/client.js"
+        repo="YangJinho0217/comments"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>

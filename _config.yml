@@ -17,6 +17,7 @@ title: Yagsill
 subtitle : Developer
 # baseurl: "/whiteglass" # the subpath of your site, e.g. /blog
 url: "https://YangJinho0217.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+repository: "YangJinho0217/comments"
 lang: en
 timezone: KR
 exclude:
@@ -29,6 +30,12 @@ exclude:
   - jekyll-whiteglass.gemspec
   - screenshot.png
   - vendor
+comments: 
+  provider: "utterances"
+  utterances:
+    theme: "github-dark"
+    issue_term: "pathname"
+
 
 # Social media
 twitter_username:
@@ -36,7 +43,7 @@ twitter_image:
 facebook_app_id:
 facebook_image:
 google_analytics: G-F2GBFJQ1WZ
-comments: false
+comments: true
 
 #SEO Related
 google_site_verification :
