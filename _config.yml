@@ -18,7 +18,7 @@ subtitle : Developer
 # baseurl: "/whiteglass" # the subpath of your site, e.g. /blog
 url: "https://YangJinho0217.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
-timezone: UTC
+timezone: KR
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -37,6 +37,10 @@ facebook_app_id:
 facebook_image:
 google_analytics: G-F2GBFJQ1WZ
 comments: false
+
+#SEO Related
+google_site_verification :
+naver_site_verification : 
 
 # Plugins
 plugins:
