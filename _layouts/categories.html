@@ -5,8 +5,10 @@ permalink: '/category'
 
 <div class="category-wrap">
 
-    <h1 class="category-title"><strong>Node.js</strong></a></h1>
-    <ul class="posts-list">
+    <h1 class="category-title">
+        <strong>Node.js</strong> <label for="nodeCt"></label>
+    </h1>
+    <ul class="posts-list" id="nodejs">
         <li>
             <h3>
                 <a href="/2023/03/20/Nodejs-Multer/">Node.JS API multer 이미지 업로드 + [postman 사용]</a>
@@ -51,8 +53,10 @@ permalink: '/category'
         </li>
     </ul>
 
-    <h1 class="category-title"><strong>Java</strong></a></h1>
-    <ul class="posts-list">
+    <h1 class="category-title">
+        <strong>Java</strong> <label for="javaCt"></label>
+    </h1>
+    <ul class="posts-list" id="java">
         <li>
             <h3>
                 <a href="/2023/02/01/JavaSpringBoot-Gradle-War/">Java Spring Boot Swagger tomcat9 배포</a>
@@ -85,11 +89,25 @@ permalink: '/category'
         </li>
     </ul>
 
-    <h1 class="category-title"><strong>Swift</strong></a></h1>
-    <ul class="posts-list">
+    <h1 class="category-title">
+        <strong>Swift</strong> <label for="swiftCt"></label>
+    </h1>
+    <ul class="posts-list" id="swift">
         <li>
             <h3>
-                <a href="/2024/01/21/Swift-MVVM/"> Swift MVVM 디자인패턴</a>
+                <a href="/2024/01/24/Swift-DeviceUUID/">Swift APNs 토큰 vs TAKUUID</a>
+                <small>2024.01.24</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/2024/01/23/Swift-Semaphore/">Swift Semaphore + Thread 관리</a>
+                <small>2024.01.23</small>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="/2024/01/21/Swift-MVVM/">Swift MVVM 디자인패턴</a>
                 <small>2024.01.21</small>
             </h3>
         </li>
@@ -137,8 +155,10 @@ permalink: '/category'
         </li>
     </ul>
 
-    <h1 class="category-title"><strong>Git Blog</strong></a></h1>
-    <ul class="posts-list">
+    <h1 class="category-title">
+        <strong>Git Blog</strong> <label for="gitCt"></label>
+    </h1>
+    <ul class="posts-list" id="git">
         <li>
             <h3>
                 <a href="/2023/05/01/Github-Blog(1)/">Github Blog 만들기(1)</a>
@@ -159,8 +179,10 @@ permalink: '/category'
         </li>
     </ul>
 
-    <h1 class="category-title"><strong>정보처리기사</strong></a></h1>
-    <ul class="posts-list">
+    <h1 class="category-title">
+        <strong>정보처리기사</strong> <label for="infoCt"></label>
+    </h1>
+    <ul class="posts-list" id="info">
         <li>
             <h3>
                 <a href="/2023/11/15/Information-processing-1/">정보처리기사 어캐땀?</a>
@@ -168,3 +190,6 @@ permalink: '/category'
             </h3>
         </li>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/categories.js"></script>
